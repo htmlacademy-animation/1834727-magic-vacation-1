@@ -40,7 +40,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition: all .3s cubic-bezier(0,.75,.4,1.87);
+    transition: all 0.3s cubic-bezier(0, 0.75, 0.4, 1.87);
   }
 
   svg {
@@ -49,8 +49,6 @@
     width: 2.3rem;
     height: 2.2rem;
   }
-
-
 
   &:focus {
     color: $c-purple;
@@ -167,7 +165,7 @@
   border: 2px solid transparent;
   border-radius: 50%;
   transform: translateY(8px);
-  transition: transform .3s ease-in, opacity .3s ease-in, color .2s ease-in-out;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in, color 0.2s ease-in-out;
   opacity: 0;
 
   @media (min-width: $stop-scaling) {
@@ -220,7 +218,7 @@
   }
 
   &--insta {
-    transition-delay: .2s;
+    transition-delay: 0.2s;
     svg {
       width: 1.5rem;
       height: 1.5rem;
@@ -233,7 +231,7 @@
   }
 
   &--vk {
-    transition-delay: .4s;
+    transition-delay: 0.4s;
     svg {
       width: 1.7rem;
       height: 1rem;
@@ -255,7 +253,7 @@
 
     &:hover {
       &::before {
-        transition: all .3s ease-in;
+        transition: all 0.3s ease-in;
         width: 112.5%;
         height: 112.5%;
       }
