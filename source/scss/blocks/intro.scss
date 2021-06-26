@@ -93,6 +93,9 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  transform: translateY(16px);
+  opacity: 0;
+  transition: all .3s ease-in-out;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -160,5 +163,12 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
+  }
+}
+
+.screen--intro.active {
+  .intro__message {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
