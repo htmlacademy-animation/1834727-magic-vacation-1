@@ -40,12 +40,15 @@
 
 .screen__footer {
   position: absolute;
+  opacity: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  transform: translateY(100%);
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
+  transition: all 0.6s cubic-bezier(0, 0.75, 0.44, 0.88);
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
@@ -353,4 +356,11 @@
 
 .screen--rules {
   background-color: $c-dark;
+}
+
+.loaded {
+  .screen__footer {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
