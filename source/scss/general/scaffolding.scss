@@ -99,3 +99,21 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.background-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: translateY(100%);
+  background-color: $c-dark;
+  opacity: 0;
+  transition: transform 0.3s ease-out 0s;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
