@@ -42,7 +42,17 @@ export default class FullPageScroll {
   onUrlHashChanged() {
     const newIndex = Array.from(this.screenElements).findIndex((screen) => location.hash.slice(1) === screen.id);
     this.activeScreen = (newIndex < 0) ? 0 : newIndex;
-    this.changePageDisplay();
+
+    if (location.hash.slice(1) === `prizes`) {
+      let backgroundScreen = document.getElementsByClassName(`background-screen`)[0];
+      backgroundScreen.classList.add(`active`);
+      setTimeout(()=>{
+        backgroundScreen.classList.remove(`active`);
+        this.changePageDisplay();
+      }, 400);
+    } else {
+      this.changePageDisplay();
+    }
   }
 
   changePageDisplay() {
