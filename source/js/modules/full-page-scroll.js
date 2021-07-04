@@ -44,7 +44,7 @@ export default class FullPageScroll {
     this.activeScreen = (newIndex < 0) ? 0 : newIndex;
 
     if (location.hash.slice(1) === `prizes`) {
-      let backgroundScreen = document.getElementsByClassName(`background-screen`)[0];
+      const backgroundScreen = document.getElementsByClassName(`background-screen`)[0];
       backgroundScreen.classList.add(`active`);
       setTimeout(()=>{
         backgroundScreen.classList.remove(`active`);
