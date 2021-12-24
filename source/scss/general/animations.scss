@@ -1,0 +1,24 @@
+/**
+ * Created by Kristina Kuznetsova <k.kristina.sdev@gmail.ru>
+ * Date: 10.07.2021
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(3.4rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
