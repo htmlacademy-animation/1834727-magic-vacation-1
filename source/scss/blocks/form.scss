@@ -82,7 +82,7 @@
 
 .form__button {
   flex-grow: 0;
-  width: 240px;
+  min-width: 240px;
 
   @media (orientation: portrait) {
     position: relative;
@@ -127,25 +127,30 @@
     }
   }
 }
-
-.form--result {
+.screen--result {
   .form__field {
-    width: calc(100% - 31rem);
+    width: 0px;
+    transition: width .5s ease-in;
+  }
+  &.screen--show {
+    .form__field {
+      width: calc(100% - 31rem);
 
-    @media (min-width: $stop-scaling) {
-      width: calc(100% - 310px);
-    }
+      @media (min-width: $stop-scaling) {
+        width: calc(100% - 310px);
+      }
 
-    @media (orientation: portrait) {
-      width: calc(100% - 5rem);
-    }
+      @media (orientation: portrait) {
+        width: calc(100% - 5rem);
+      }
 
-    @media (max-width: $tablet) and (orientation: landscape) {
-      width: calc(100% - 9rem);
-    }
+      @media (max-width: $tablet) and (orientation: landscape) {
+        width: calc(100% - 9rem);
+      }
 
-    @media (max-width: $mobile) and (orientation: landscape) {
-      width: calc(100% - 5rem);
+      @media (max-width: $mobile) and (orientation: landscape) {
+        width: calc(100% - 5rem);
+      }
     }
   }
 }
